@@ -3,29 +3,39 @@ BankAccount bankAccount = new BankAccount("112233");
 bool repeat = true;
 while (repeat)
 {
+    Console.Clear();
     Console.WriteLine("Welcome to THE EVIL Moklet ATM");
     Console.WriteLine("Menu");
     Console.WriteLine("1. Display info\n2. Draw Money\n3. Deposit Money\n4. Exit");
     string input = Console.ReadLine();
     switch (input){
         case "1":
+            Console.Clear();
             bankAccount.DisplayInfo();
+            Console.ReadLine();
             break;
         case "2":
+            Console.Clear();
             Console.WriteLine("Input the money: ");
             double amount = double.Parse(Console.ReadLine());
             bankAccount.Draw(amount);
+            Console.ReadLine();
             break;
         case "3":
+            Console.Clear();
             Console.WriteLine("Input the money: ");
             double amount2 = double.Parse(Console.ReadLine());
             bankAccount.Deposit(amount2);
+            Console.ReadLine();
             break;
         case "4":
+
             repeat = false;
             break;
         default:
+            Console.Clear();
             Console.WriteLine("Thats not an option, silly :3c");
+            Console.ReadLine();
             break;
     }
 }
