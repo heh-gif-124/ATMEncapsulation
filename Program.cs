@@ -6,7 +6,7 @@ while (repeat)
     Console.Clear();
     Console.WriteLine("Welcome to THE EVIL Moklet ATM");
     Console.WriteLine("Menu");
-    Console.WriteLine("1. Display info\n2. Draw Money\n3. Deposit Money\n4. Exit");
+    Console.WriteLine("1. Display info\n2. Withdraw Money\n3. Deposit Money\n4. Exit");
     string input = Console.ReadLine();
     switch (input){
         case "1":
@@ -18,7 +18,7 @@ while (repeat)
             Console.Clear();
             Console.WriteLine("Input the money: ");
             double amount = double.Parse(Console.ReadLine());
-            bankAccount.Draw(amount);
+            bankAccount.Withdraw(amount);
             Console.ReadLine();
             break;
         case "3":
@@ -65,7 +65,7 @@ class BankAccount
         _Balance = 1000000;
     }
 
-    public void Draw(double amount)
+    public void Withdraw(double amount)
     {
         if (amount > _Balance) Console.WriteLine("The amount should not exceed your balance!");
         else
