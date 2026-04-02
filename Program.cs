@@ -29,7 +29,7 @@ while (repeat)
             Console.ReadLine();
             break;
         case "4":
-
+            Console.WriteLine("\n Thank you for using our service!");
             repeat = false;
             break;
         default:
